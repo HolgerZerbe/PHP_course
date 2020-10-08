@@ -70,7 +70,7 @@ $zahlen[] = "13";
     <br><hr><br>
 
     <h4>Assoziative Arrays</h4> 
-    <p><b>Assoziative Arrays sind Arrays, in denen die Werte einem key(Schlüssel) zugeordent wird, dieser key(Schlüssel ist ein String)</b></p>
+    <p><b>Assoziative Arrays sind Arrays, in denen die Werte einem key(Schlüssel) zugeordent wird, dieser key(Schüssel ist ein String)</b></p>
     <br>
     <p>$max["vorname"] = "Max"; // Initialisierung des Assoziativen Arrays Max, dem Key "vorname" wird er Wert "Max" zugewiesen</p>
     <p>$max["nachname"] = "Mustermann"; // Im  Assoziativen Array Max wird der neue Key "nachname" angelegt und ihm wird der Wert "Mustermann zugewiesen</p>
