@@ -1,5 +1,5 @@
 <?php 
-if (!isset($_POST["vorname"]) || !isset($_POST["nachname"])) {
+if !(isset($_POST["vorname"]) && isset($_POST["nachname"])) {
   $ausgabe = "Wer sind sie?";
 } else {
   $ausgabe = "Hallo " . ucfirst($_POST["vorname"]) . " " . ucfirst($_POST["nachname"]) . ". Schön, dass Sie wieder da sind.";
