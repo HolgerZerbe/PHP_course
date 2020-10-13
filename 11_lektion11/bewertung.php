@@ -57,16 +57,19 @@ switch($note) {
 
   <p>Ihre Bewertung: <?php echo $bewertungsAusgabe; ?></p>
 
-  <br><br><hr><br><br>
-
+  <br><hr><br>
+<!-- 
   <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">Löschen der Bewertung: 
   <input type="checkbox" name="loeschen" id="loeschenJa" value="j" checked>ja
 
   <br><br>
 
-  <input type="submit" value="Absenden">
-  </form>
+  </form> -->
 
+  <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
+
+  <input type="submit" name="loeschen" value="Bewertung löschen">
+  </form>
 
 </head>
 <body>
