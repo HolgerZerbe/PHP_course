@@ -1,14 +1,14 @@
 <?php 
     function druckeMehrfach($string, $anzahl) {
         for ($i = 0; $i < $anzahl; $i++) {
-            echo $string;
+            echo $string. "<br>";
         }
     } 
 
     
     function druckeMehrfach2($string, $anzahl=3) {
         for ($i = 0; $i < $anzahl; $i++) {
-            echo $string;
+            echo $string. "<br>";
         }
     } 
 
@@ -44,12 +44,13 @@
     druckeMehrfach2("Nur mit einem Parameter! ");
 
     $returnedErgebnis = druckeMehrfachMitReturn("Return ", 50);
-    echo $returnedErgebnis;
+    echo $returnedErgebnis. "<br>";
 
-    echo zaehleWoerter("Ich bin dann mal weg!");
-    $teileWoerterArray[] = teileWoerter("Ich bin dann mal weg!");
+    echo zaehleWoerter("Ich bin dann mal weg!") . "<br>";
+
+    $teileWoerterArray = teileWoerter("Ich bin dann mal weg!");
     
-    $teileWoerterString = implode(", ", $teileWoerterArray[0]);
+    $teileWoerterString = implode(", ", $teileWoerterArray);
     
     echo $teileWoerterString;
     ?>
