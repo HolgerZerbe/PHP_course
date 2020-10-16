@@ -44,22 +44,22 @@ if (!(empty($_POST))) {
     
     <form action=<?php echo $_SERVER["PHP_SELF"] ?> method="post">
     
-    <input type="text" name="vorname" id="vorname" placeholder="Vorname">
-    <input type="text" name="nachname" id="nachname" placeholder="Nachname">
-    <input type="text" name="strasse" id="strasse" placeholder="Strasse">
-    <input type="text" name="hausnummer" id="hausnummer" placeholder="Hausnummer">
-    <input type="text" name="plz" id="plz" placeholder="Postleitzahl">
+    <input type="text" name="vorname" id="vorname" placeholder="Vorname" required>
+    <input type="text" name="nachname" id="nachname" placeholder="Nachname" required>
+    <input type="text" name="strasse" id="strasse" placeholder="Strasse" required>
+    <input type="text" name="hausnummer" id="hausnummer" placeholder="Hausnummer" required>
+    <input type="text" name="plz" id="plz" placeholder="Postleitzahl" required>
     <input type="text" name="ort" id="ort" value="Entenhausen">
     
     <input type="submit" value="Person eintragen">
 
     <br><br>
     <p><?php 
-    
-        !(empty($_POST)) ? $message = "Danke, Person wurde hinzugefügt" : null;
-        echo $message;
-        ?> 
-    </p>
+    !(empty($_POST)) ? $message = "Danke, Person wurde hinzugefügt" : null;
+            echo $message;
+            unset($POST);
+             ?> 
+        </p>
     
     
     </form>

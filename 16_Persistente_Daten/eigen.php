@@ -92,7 +92,7 @@ $keys = array_keys($bewohnerEntenhausen[0]);
                                 <td><?php echo $bewohnerEntenhausen[$i][$keys[3]]; ?></td>
                                 <td><?php echo $bewohnerEntenhausen[$i][$keys[4]]; ?></td>
                                 <td><?php echo $bewohnerEntenhausen[$i][$keys[5]]; ?></td>
-                                
+                                <td></td>
                             </tr>
                         <?php
                     }
