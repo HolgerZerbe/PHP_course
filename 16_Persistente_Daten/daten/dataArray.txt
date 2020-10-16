@@ -1,0 +1,1 @@
+a:6:{s:7:"vorname";s:6:"Holger";s:8:"nachname";s:9:"Holgerson";s:7:"strasse";s:20:"IchBinDannMalWegStr.";s:10:"hausnummer";s:4:"666z";s:3:"plz";i:97531;s:3:"ort";s:22:"HasteNichtGesehenStadt";}
