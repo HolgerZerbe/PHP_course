@@ -33,7 +33,7 @@ if (!(empty($_POST))) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>fuegtBewohnerZuEntenhausen.php</title>
     <style>
-        input{ display: block;
+        input, p { display: block;
             margin: 20px 0 0 30px;
             width: 200px;
             font-size: 1.2em;}

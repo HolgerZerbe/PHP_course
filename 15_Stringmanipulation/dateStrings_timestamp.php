@@ -6,6 +6,7 @@ echo 'Das aktuelle Datum ist: ' . strftime('%d.%m.%y') . '<br>';
 
 echo 'Die aktuelle Uhrzeit ist: '. strftime('%H.%M.%S') . '<br>';
 
+
 // phpinfo()
 
 echo 'Der Timestamp für meinen Geburtstag 0 Uhr ist: '. mktime(0,0,0,2,24,1969) . '<br>';
