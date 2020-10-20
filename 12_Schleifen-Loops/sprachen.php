@@ -13,14 +13,14 @@
     <p>Liste mit foreach-Schleife</p>
     <ol>
         <?php foreach ($sprachen as $sprache) { ?>
-            <li><?php echo $sprache ?> </li> 
+            <li><?= $sprache; ?> </li> 
         <?php } ?>
     </ol>
 
     <p>Liste mit for-Schleife</p>
     <ol>
         <?php for ($i=0; $i<count($sprachen); $i++) { ?>
-            <li><?php echo $sprachen[$i] ?></li>
+            <li><?= $sprachen[$i]; ?></li>
         <?php } ?>
     </ol>
 
@@ -29,7 +29,7 @@
         <?php 
             $j=0;
             while ($j<count($sprachen)) { ?>
-                <li><?php echo $sprachen[$j] ?></li>
+                <li><?= $sprachen[$j]; ?></li>
             <?php 
             $j++; 
         } ?>
