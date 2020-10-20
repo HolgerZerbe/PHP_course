@@ -8,17 +8,19 @@ error_reporting(E_ALL) zeigt alle Fehlermeldungen und Warnungen an:<br><br>
 
 Wenn wie jetzt $daten = file_get_contents("daten/example.txt"); ausführen, erhalten wir folgende Meldung';
 
-$daten = file_get_contents("daten/example.txt");
+$daten = file_get_contents("daten/example.txt") . "<br><br>";
 
 
 
-echo 'Die Parameter können mit den Bit-Operatoren '
+echo '<br><br>Die Parameter können mit den Bit-Operatoren "!" verneint werden, so unterdrückt error_reporting(<b>!</b>E_ALL); alle Fehlermeldungen.<br>
+Äquivalent kann dies auch geschehen mit error_reporting(0);
+<br><br>
+
+
+Wenn wie jetzt $daten = file_get_contents("daten/example.txt"); ausführen, erhalten wir <b>keine</b> Meldung';
 
 error_reporting(!E_ALL);
 
 $daten = file_get_contents("daten/example.txt");
-
-
-
 
 ?>
