@@ -1,5 +1,11 @@
 <?php
 
+function ueberpruefeObDatentypIdentisch($a, $b) {
+
+    return $b - $a;
+
+}
+
 $testArrayNumbers = [23, 4711, 94, 17, 15, 666];
 $testArrayStrings = ["Berlin", "Koblenz", "New York", "Köln", "NEW BERLIN"];
 $testArrayMixed = [23, "Berlin", "New Berlin", 17, 15, "NEW BERLIN"];
@@ -20,6 +26,12 @@ $testArrayAssoziativForKsort = [
     "familienstand" => "ledig",
     "kinder" => 0
 ];
+$testArrayMixedForUsort = [23, "Berlin", "New Berlin", 17, 15, "NEW BERLIN"];
+
+
+
+
+
 
 echo "<h3>sort()</h3>"; 
 
@@ -94,12 +106,29 @@ echo var_dump($testArrayAssoziativ). "<br><br>";
 
 echo "<h3>ksort()</h3>"; 
 
-echo 'ksort() sortiert die Indizes eines Arrays:<br>';
+echo 'ksort() sortiert den Array nach den Indizes eines Arrays:<br>';
 
 echo '$testArrayAssoziativForKsort = ["voname"=> "Donald", "nachname"=> "Duck", "wohnort"=> "Entenhausen", "familienstand"=> "ledig", "kinder"=> 0] ergibt nach Anwendung von ksort($testArrayAssoziativForKsort): <br>
 // hier werden die Items nach den Keys alphanumerisch sortiert! <br>';
 
 ksort($testArrayAssoziativForKsort);
-echo var_dump($testArrayAssoziativForKsort);
+echo var_dump($testArrayAssoziativForKsort) . "<br>";
+
+echo "<h3>usort(), uasort(), uk(sort)</h3>"; 
+
+echo 'Mit diesen drei Methoden können Arrays mit <b>U</b>ser-definierten Funktionen sortiert werden (analag zu sort(), asort und ksort()<br>
+die Suchfunktion muss vorher definiert sein und wird als Callback-Funktion als zweiter Parameter übergeben.<br><br>';
+
+
+foreach ($testArrayMixedForUsort as $value) {
+    
+    echo gettype($value);
+    
+}
+
+$newArray = usort($testArrayMixedForUsort, 'ueberpruefeObDatentypIdentisch');
+echo var_dump($testArrayMixedForUsort) . "<br>";
+echo var_dump($newArray) . "<br>";
+
 
 ?>
