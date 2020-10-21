@@ -1,4 +1,4 @@
-a:6:{i:0;a:4:{s:5:"titel";s:24:"Blindheit per Definition";s:11:"erstellt_am";i:1603196188;s:5:"autor";s:7:"inewton";s:6:"inhalt";s:438:"    Mit Blindheit per Definition geschlagen, dennoch nicht unsichtbar,
+a:7:{i:0;a:4:{s:5:"titel";s:24:"Blindheit per Definition";s:11:"erstellt_am";i:1603196188;s:5:"autor";s:7:"inewton";s:6:"inhalt";s:438:"    Mit Blindheit per Definition geschlagen, dennoch nicht unsichtbar,
     präsentiere ich mich als unbeachtetes und ungeliebtes Stiefkind
     zeitgenössischer Literatur. Meine Bestimmung liegt - wie ich selbst -
     in engen Grenzen und ist rein platzhalterischer Natur.
@@ -10,4 +10,4 @@ a:6:{i:0;a:4:{s:5:"titel";s:24:"Blindheit per Definition";s:11:"erstellt_am";i:1
     
     So auch dieser.";}i:2;a:4:{s:5:"titel";s:18:"Wenn ich gross bin";s:11:"erstellt_am";i:1603196188;s:5:"autor";s:6:"ghegel";s:6:"inhalt";s:212:"    Ich bin nur ein kleiner Blindtext. Wenn ich gross bin, will ich
     Ulysses von James Joyce werden. Aber jetzt lohnt es sich noch nicht,
-    mich weiterzulesen. Denn vorerst bin ich nur ein kleiner Blindtext.";}i:3;a:4:{s:5:"titel";s:16:"jetzt mal testen";s:6:"inhalt";s:46:"jetzt testen wir mal ob Übung 91 funktioniert";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196225;}i:4;a:4:{s:5:"titel";s:21:"jetzt noch mal testen";s:6:"inhalt";s:46:"jetzt testen wir mal ob Übung 91 funktioniert";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196480;}i:5;a:4:{s:5:"titel";s:16:"definitiver Test";s:6:"inhalt";s:50:"Jetzt definitiver Test ob es nach Übung 91 läuft";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196614;}}
+    mich weiterzulesen. Denn vorerst bin ich nur ein kleiner Blindtext.";}i:3;a:4:{s:5:"titel";s:16:"jetzt mal testen";s:6:"inhalt";s:46:"jetzt testen wir mal ob Übung 91 funktioniert";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196225;}i:4;a:4:{s:5:"titel";s:21:"jetzt noch mal testen";s:6:"inhalt";s:46:"jetzt testen wir mal ob Übung 91 funktioniert";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196480;}i:5;a:4:{s:5:"titel";s:16:"definitiver Test";s:6:"inhalt";s:50:"Jetzt definitiver Test ob es nach Übung 91 läuft";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603196614;}i:6;a:4:{s:5:"titel";s:18:"Test am 21.10.2020";s:6:"inhalt";s:30:"Nochmal ein Test am 21.10.2020";s:5:"autor";s:7:"inewton";s:11:"erstellt_am";i:1603260835;}}

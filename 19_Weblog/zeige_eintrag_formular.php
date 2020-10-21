@@ -8,26 +8,24 @@ session_start();
 if (!istEingeloggt()) {
     redirect('index.php');
 }
+// Wenn es einen POST request gab (es also die Superglobabe $_POST gibt),
+// dann erstelle einen neuen Eintrag im Format der anderen Einträge.
+// Hole die alten Einträge, hänge den neuen an und speichere.
+// Ermittel den letzten index und redirecte mit Übergabe des index als URL-Parameter.
 
-
-// Erstelle einen neuen Eintrag im Format der anderen Einträge.
-if ($_POST) { $eintrag = [
     'titel' => trim($_POST['titel']),
     'inhalt' => trim($_POST['inhalt']),
     'autor' => $_SESSION['eingeloggt'],
     'erstellt_am' => time(),
 ];
-};
-
-// Hole die alten Einträge, hänge den neuen an und speichere.
-// Ermittel den letzten index und redirecte mit Übergabe des index als URL-Parameter
-$eintraege = holeEintraege();
-if ($_POST) { 
+    $eintraege = holeEintraege();
     $eintraege[] = $eintrag;
     speichereEintraege($eintraege);
     $index = array_key_last($eintraege);
     redirect("eintrag_danke.php?id=$index");
 };
+
+
 
 ?>
 <!DOCTYPE html>

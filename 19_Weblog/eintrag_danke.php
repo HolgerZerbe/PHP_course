@@ -13,6 +13,9 @@ if ((!istEingeloggt()) || empty($_GET)) {
     redirect('index.php');
 }
 
+
+// Folgender Code wird jetz in zeige_eintrag_formular.php ausgeführt:
+
 // // Erstelle einen neuen Eintrag im Format der anderen Einträge.
 // $eintrag = [
 //     'titel' => trim($_POST['titel']),
@@ -28,6 +31,10 @@ if ((!istEingeloggt()) || empty($_GET)) {
 // // ausgelagert auf:
 
 // speichereEintraege($eintraege);
+
+
+// Hole alle Einträge und speichere unter $index den notwendigen Index für 
+// den letzten Eintrag aus dem übergebenen URL-Parameter "id"
 
 $eintraege = holeEintraege();
 $index = $_GET["id"];
@@ -58,11 +65,14 @@ $index = $_GET["id"];
 
             <article class="zitat">
               <header class="eintrag_oben">
-                  <h1><?= bereinige($eintraege[$index]['titel']) ?></h1>
+
+                <!-- Zeige den letzten Beitrag an (nutze dazu die o.a. Variablen $eintraege und $index) -->
+
+                <h1><?= bereinige($eintraege[$index]['titel']) ?></h1>
               </header>
 
               <p>
-                  <?= nl2br(bereinige($eintraege[$index]['inhalt'])) ?>
+                <?= nl2br(bereinige($eintraege[$index]['inhalt'])) ?>
               </p>
             </article>
 
