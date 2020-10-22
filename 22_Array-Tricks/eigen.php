@@ -190,7 +190,7 @@ echo 'dies ist besonders nützlich bei kurzen Prüffunktionen, elche nicht nochm
 echo'
 $zahlen = [4711, 63, -111, 0 , 24, -201]; ergibt somit: <br>
 usort($zahlen, fn ($a, $b) => $a <=> $b);<br>
-// wichtig ist in PHP hier das Schlüsselwort <b>fn</b> für eine anonyme Funktion!
+// wichtig ist in PHP in dieser <b>(Fat) Arrow_Syntax das Schlüsselwort <b>fn</b> für eine anonyme Funktion!
 
 <br><br>';
 $zahlen = [4711, 63, -111, 0 , 24, -201];
