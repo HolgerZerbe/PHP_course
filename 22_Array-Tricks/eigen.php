@@ -182,7 +182,7 @@ for ($i = 0; $i<count($personenArray); $i++) {
 <pre><?php var_dump($personenArray) ?></pre>;
 
 <?php 
-echo "<h3>Anpnyme Funktionen</h3>";
+echo "<h3>Anonyme Funktionen</h3>";
 
 echo 'Anstatt eines Funktionsnamens kann auch eine anonyme Funktion als Callback übergeben werden,<br>';
 echo 'dies ist besonders nützlich bei kurzen Prüffunktionen, elche nicht nochmal verwendet werden:<br><br>';
@@ -190,11 +190,56 @@ echo 'dies ist besonders nützlich bei kurzen Prüffunktionen, elche nicht nochm
 echo'
 $zahlen = [4711, 63, -111, 0 , 24, -201]; ergibt somit: <br>
 usort($zahlen, fn ($a, $b) => $a <=> $b);<br>
-// wichtig ist in PHP in dieser <b>(Fat) Arrow_Syntax das Schlüsselwort <b>fn</b> für eine anonyme Funktion!
+// wichtig ist in PHP in dieser <b>(Fat) Arrow-Syntax</b> das Schlüsselwort <b>fn</b> für eine anonyme Funktion!
 
 <br><br>';
 $zahlen = [4711, 63, -111, 0 , 24, -201];
 usort($zahlen, fn ($a, $b) => $a <=> $b);
-echo var_dump($zahlen);
+echo var_dump($zahlen) . "<br><br>";
+
+
+echo "<h3>Splat-Operator</h3>";
+
+echo 'Mit dem Splat-Operator kann einer Funktion ein Array als Argumentenliste übergeben werden.<br>';
+echo '$zahlenArray  = [ 22, 4, 71, -3] <br>';
+echo 'function beispielFunktionFuerSplat ($a, $b, $c, $d) { do someting } <br>';
+echo 'Funktionsaufruf mit Splat-Operator: beispielFunktionFuerSplat(...$zahlenArray); <br><br>';
+echo 'Der Splat Operator kann mit anderen Werten in der Argumentenliste kombiniert werden, er muss jedoch am Ende stehen und es darf in jedem Funktionsaufruf nur ein Splat-Operator verwendet werden.<br><br>';
+
+echo "<h3>Variadische Funtkionen</h3>";
+
+echo 'Variadischen Funktionen können eine beliebige Zahl an Argumenten übergeben werden. Dazu wird der Spalt-Operator genutzt, damit werden die einzelnen übergebenen Werte zu einem Array umgewandelt.<br><br>';
+?>
+<pre><?php echo 'function beispielFunktionFuerVariadisch (...argumente) {
+    $summe = 0;
+    foreach ($argumente als zahl) {
+        $summe += $zahl;}
+        return summe;
+ } <br>' ?></pre>
+<?php 
+echo 'Funktionsaufruf: beispielFunktionFuerVariadisch (5, 4); <br>';
+echo 'Funktionsaufruf: beispielFunktionFuerVariadisch (5, 4, 6, 19, 1, 8); <br>';
+echo 'Funktionsaufruf: beispielFunktionFuerVariadisch (5, 4, 6, 19, 1, 8, 32, 178); <br>';
+
+echo "<h3>Dereferenzierung</h3>";
+echo 'Returned eine Funktion einen numerischen Array dann kann durch Dereferenzierung gleich nur das gewünschte Item beim Funktionsaufruf benannt und erhalten werden anstatt des kompletten Arrays!<br><br>
+Beispiel:<br>
+echo funktionsAufrufArray()<b>[0]</b><br>
+// Man erhalt also nur die Index-Nummer 0 als Wert und nicht den ganzen Array';
+
+echo "<h3>Destructuring</h3>";
+
+echo'Unter Destructuring versteht man die Zuweisung einzelner Array-Werte an Variablen. <br>';
+echo '[$a, $b, $3, $4 ] = ["08", "15", "47", "11"]; <br>
+hier bekommt die Variable $a den String "08", die Variable $b den String "15", die Variable $c den String "47" und die Variable $d den String "11" als Wert. <br><br>
+gibt man mehr Variablennamen als Items an, so bekommt man die Meldung "Undefined offset: number",<br>
+gibt es mehr Items als Variablennamen so werden alle Variablen befüllt und der Rest der Items fällt weg.<br><br>
+alternative Schreibweisen:<br><br>
+[0 => $a, 1 => $b, 4 => $c] = ["Ich", "bin", "dann", "mal", "weg!]; <br>
+Hier bekommt die Variable $a den String "Ich", die Variable $b den String "bin" und die Variable $c den String "weg" als Wert. Die Werte der Indizes 2 und 3 werden nirgends zugewiesen.<br><br>
+Genauso funktioniert es beim Setzen von zwei Kommatar hintereinander, um anzuzeigen, das Indizes ausgelassen werden:<br>
+[$a, $b,, $c, $d] = ["Ich", "bin", "dann", "mal", "weg!]; <br>
+Hier bekommt die Variable $a den String "Ich", die Variable $b den String "bin", die Variable $c den String "mal" und die Variable $d den String "weg" als Wert. Der Wert des Index 2 wird nirgends zugewiesen.<br><br>
+';
 
 ?>
