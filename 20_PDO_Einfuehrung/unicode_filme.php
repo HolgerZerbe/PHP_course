@@ -20,6 +20,6 @@ $daten = $statement->fetchAll();
 
 echo var_dump($daten);
 
-$db->query('DROP TABLE filme');
+// $db->query('DROP TABLE filme');
 
 ?>
