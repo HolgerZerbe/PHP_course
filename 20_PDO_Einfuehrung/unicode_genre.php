@@ -13,7 +13,7 @@ $db->query(
 
 $db->query('INSERT INTO genres (titel) VALUES ("Rocky V")');
 
-$statement = $db->query('SELECT * FROM genre');
+$statement = $db->query('SELECT * FROM genres');
 $daten = $statement->fetchAll();
 
 echo var_dump($daten);
