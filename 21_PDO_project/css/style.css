@@ -1,0 +1,10 @@
+@charset "utf-8";
+
+input, select {
+    display: block;
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    min-width: 300px;
+}

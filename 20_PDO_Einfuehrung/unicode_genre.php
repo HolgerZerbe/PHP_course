@@ -11,13 +11,13 @@ $db->query(
 );
 
 
-$db->query('INSERT INTO genres (titel) VALUES ("Rocky V")');
+// $db->query('INSERT INTO genres (titel) VALUES ("Rocky V")');
 
-$statement = $db->query('SELECT * FROM genres');
-$daten = $statement->fetchAll();
+// $statement = $db->query('SELECT * FROM genres');
+// $daten = $statement->fetchAll();
 
-echo var_dump($daten);
+// echo var_dump($daten);
 
-$db->query('DROP TABLE genres');
+// $db->query('DROP TABLE genres');
 
 ?>
