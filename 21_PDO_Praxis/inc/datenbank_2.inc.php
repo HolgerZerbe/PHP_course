@@ -7,7 +7,7 @@ $optionen = [
 ];
 
 $db = new PDO (
-    'mysql:host=localhost; dbname=lecture_22; port=3308',
+    'mysql:host=localhost; dbname=lecture_21; port=3308',
     'root',
     '',
     $optionen
