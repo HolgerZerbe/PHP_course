@@ -13,6 +13,9 @@ if (!istEingeloggt()) {
 // Hole die alten Einträge, hänge den neuen an und speichere.
 // Ermittel den letzten index und redirecte mit Übergabe des index als URL-Parameter.
 
+if ($_POST) {
+
+    $eintrag = [
     'titel' => trim($_POST['titel']),
     'inhalt' => trim($_POST['inhalt']),
     'autor' => $_SESSION['eingeloggt'],
