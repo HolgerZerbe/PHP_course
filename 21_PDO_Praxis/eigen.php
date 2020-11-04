@@ -118,13 +118,38 @@ $allePersonen = [
 
 $statement_4 = $db->prepare('INSERT INTO personen (nachname, vorname, geschlecht, ort) VALUES (?,?,?,?)');
 
-for ($i = 0; $i < count($allePersonen); $i++) {
-    foreach ($allePersonen[$i] as $einzelnePerson) {
-        echo var_dump($einzelnePerson) . '<br>';
-        // $statement_4-> execute([$einzelnePerson]);
+
+    foreach ($allePersonen as $einzelnePerson) {
+        $statement_4-> execute([...$einzelnePerson]);
     }
+
+
+
+$allePersonenAssoziativ = [
+    [
+    'nachname' => 'Cow',
+    'vorname' => 'Klarabella',
+    'geschlecht' => 'f',
+    'wohnort' => 'Entenhausen'
+    ],
+    [
+    'nachname' => 'Dog',
+    'vorname' => 'Goofy',
+    'geschlecht' => 'm',
+    'wohnort' => 'Entenhausen'
+    ], 
+    [
+    'nachname' => 'Duck',
+    'vorname' => 'Dorette',
+    'geschlecht' => 'm',
+    'wohnort' => 'Bauernhof bei Entenhausen'
+    ],
+];
+
+$statement_5 = $db->prepare('INSERT INTO personen (nachname, vorname, geschlecht, ort) VALUES (:nachname, :vorname, :geschlecht, :wohnort)');
+
+foreach ($allePersonenAssoziativ as $einzelnePersonAssoziativ) {
+    $statement_5-> execute($einzelnePersonAssoziativ);
 }
-
-
 
 ?>
