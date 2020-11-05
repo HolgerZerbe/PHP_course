@@ -4,19 +4,6 @@
 require_once dirname(__FILE__) . '/datenbank.inc.php';
 
 
-// function holeEintraege($umgedreht = false)
-// {
-//     if (file_exists(PFAD_EINTRAEGE)) {
-//         $eintraege = unserialize(file_get_contents(PFAD_EINTRAEGE));
-//         if ($umgedreht === true) {
-//             $eintraege = array_reverse($eintraege);
-//         }
-//     } else {
-//         $eintraege = [];
-//     }
-
-//     return $eintraege;
-// }
 
 function bereinige($benutzerEingabe, $encoding = 'UTF-8')
 {
@@ -47,14 +34,3 @@ function loggeAus()
 {
     unset($_SESSION['eingeloggt']);
 }
-
-// function speichereEintraege($eintraege) {
-
-//     $sql = 'INSERT INTO comments (titel, erstellt_am, autor, inhalt) VALUES (:titel, :erstellt_am, :autor, :inhalt)';
-    
-//     foreach ($eintraege as $eintrag) {
-//     $statement = $db->prepare($sql);
-//     $statement->execute($eintrag);
-//     }
-
-// }

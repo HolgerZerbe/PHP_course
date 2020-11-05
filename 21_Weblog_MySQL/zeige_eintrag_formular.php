@@ -21,33 +21,32 @@ if ($_POST) {
     'autor' => $_SESSION['eingeloggt'],
     'erstellt_am' => time(),
 ];
-    // $eintraege = holeEintraege();
 
-    $sql = 'SELECT * FROM comments';
+// speichere den neuen Eintrag in der Datenbank
+
+$sql = 'INSERT INTO comments (titel, erstellt_am, autor, inhalt) VALUES (:titel, :erstellt_am, :autor, :inhalt)';
+
+$statement = $db->prepare($sql);
+
+// echo var_dump($eintrag);
+
+$statement->execute($eintrag);
+
+
+// lese den höchsten Index aus der Datenbank aus (da der Index auto_increment ist, wird immer der 
+// neueste Index ausgelesen) und redirecte zu eintrag_danke.php mit dem Index als URL-Parameter
+
+$sql = 'SELECT MAX(id) FROM comments';
     
-    $statement = $db->query($sql);
+$statement = $db->query($sql);
 
-    $eintraege = $statement->fetchAll();
-    
-    $eintraege[] = $eintrag;
-    
-    // speichereEintraege($eintraege);
+$index = $statement->fetch();
+$indexnumber = intval($index['MAX(id)']);
 
-    $sql = 'INSERT INTO comments (titel, erstellt_am, autor, inhalt) VALUES (:titel, :erstellt_am, :autor, :inhalt)';
 
-    $statement = $db->prepare($sql);
+// echo var_dump($indexnumber);
 
-    foreach ($eintraege as $einzelnerEintrag) {
-        echo var_dump($eintrag);
-    $statement->execute($einzelnerEintrag);
-    }
-    // $statement_5 = $db->prepare('INSERT INTO personen (nachname, vorname, geschlecht, ort) VALUES (:nachname, :vorname, :geschlecht, :wohnort)');
-
-    // foreach ($allePersonenAssoziativ as $einzelnePersonAssoziativ) {
-    //     $statement_5-> execute($einzelnePersonAssoziativ);
-   
-    $index = array_key_last($eintraege);
-    redirect("eintrag_danke.php?id=$index");
+redirect("eintrag_danke.php?id=$indexnumber");
 };
 
 

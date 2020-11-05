@@ -14,30 +14,16 @@ if ((!istEingeloggt()) || empty($_GET)) {
 }
 
 
-// Folgender Code wird jetz in zeige_eintrag_formular.php ausgeführt:
+// Hole den letzten Eintrag aus der Datenbank mit dem übergebenen URL-Parameter "id"
 
-// // Erstelle einen neuen Eintrag im Format der anderen Einträge.
-// $eintrag = [
-//     'titel' => trim($_POST['titel']),
-//     'inhalt' => trim($_POST['inhalt']),
-//     'autor' => $_SESSION['eingeloggt'],
-//     'erstellt_am' => time(),
-// ];
-
-// // Hole die alten Einträge, hänge den neuen an und speichere.
-// $eintraege = holeEintraege();
-// $eintraege[] = $eintrag;
-// // file_put_contents(PFAD_EINTRAEGE, serialize($testdaten));
-// // ausgelagert auf:
-
-// speichereEintraege($eintraege);
-
-
-// Hole alle Einträge und speichere unter $index den notwendigen Index für 
-// den letzten Eintrag aus dem übergebenen URL-Parameter "id"
-
-$eintraege = holeEintraege();
 $index = $_GET["id"];
+
+$sql = "SELECT * FROM comments WHERE id = $index";
+    
+$statement = $db->query($sql);
+
+$eintrag = $statement->fetch();
+
 ?>
 
 <!DOCTYPE html>
@@ -68,11 +54,11 @@ $index = $_GET["id"];
 
                 <!-- Zeige den letzten Beitrag an (nutze dazu die o.a. Variablen $eintraege und $index) -->
 
-                <h1><?= bereinige($eintraege[$index]['titel']) ?></h1>
+                <h1><?= bereinige($eintrag['titel']) ?></h1>
               </header>
 
               <p>
-                <?= nl2br(bereinige($eintraege[$index]['inhalt'])) ?>
+                <?= nl2br(bereinige($eintrag['inhalt'])) ?>
               </p>
             </article>
 
