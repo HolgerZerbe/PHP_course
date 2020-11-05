@@ -34,7 +34,12 @@ $eintraege = $statement->fetchAll();
         <section id="content">
 
             <?php foreach ($eintraege as $e): ?>
-                <?php require 'inc/eintrag.tpl.php'; ?>
+                <?php
+                if (istEingeloggt()) {
+                    require 'inc/loeschen_bearbeiten.tpl.php';
+                    }
+                    require 'inc/eintrag.tpl.php';   
+                ?>
             <?php endforeach; ?>
 
         </section>
