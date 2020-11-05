@@ -46,7 +46,7 @@ $eintrag = $statement->fetch();
         <section id="content">
 
             <header>
-                <h1>Folgender Eintrag wurde erfolgreich gespeichert:</h1>
+                <h1>Folgender Eintrag wurde erfolgreich erstellt bzw. geändert und gespeichert:</h1>
             </header>
 
             <article class="zitat">
