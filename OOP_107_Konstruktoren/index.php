@@ -4,6 +4,7 @@ require_once 'kursteilnehmer.php';
 require_once 'person.php';
 require_once 'fussball.php';
 
+// verschiedene neue Objekte, denen als 4. Parameter jeweils ein anderer Datentyp übergeben wird.
 
 $ich = new kursteilnehmer('Holger', 'Holgerson', '1919-05-02', 'HTML, CSS, PHP, Vue.js');
 $robert = new kursteilnehmer('Robert', 'Robertson', '1978-09-30', ['JavaScript', 'PHP', 'Vue.js']);
